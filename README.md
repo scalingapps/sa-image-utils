@@ -1,14 +1,14 @@
 # sa-image-utils
 Node image utilities
 
-# Code base
+# code base
 TypeScript
 
-# Main methods
+# main methods
 getRawImageFromUrl (return the buffer and a string with the content-type extracted from the response header)
 rawImageToBase64 (convert the buffer to base64 format, i.e. data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAA...)
 
-# Example Using from vanilla JS (node)
+# # example using vanilla JS (node)
 ```javascript
 var {
 SaImageUtils 
