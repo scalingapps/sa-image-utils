@@ -8,7 +8,7 @@ TypeScript
 getRawImageFromUrl (return the buffer and a string with the content-type extracted from the response header)
 rawImageToBase64 (convert the buffer to base64 format, i.e. data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAA...)
 
-# Example
+# Example Using from vanilla JS (node)
 ```javascript
 var {
 SaImageUtils 
