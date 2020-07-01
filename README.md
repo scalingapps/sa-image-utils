@@ -1,5 +1,5 @@
 # sa-image-utils
-Image utilities
+Node image utilities
 
 # Code base
 TypeScript
