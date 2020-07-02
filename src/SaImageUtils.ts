@@ -14,7 +14,7 @@ export interface SaImageUtilsInterface {
 export class SaImageUtils implements SaImageUtilsInterface {
 	private getMessageFromException(e: any){
 		if (!e) {
-			return 'unknown exception'
+			return 'unknown exception';
 		}
 		return (e.stack ? e.stack.split('\n') : e).toString();
 	}

@@ -1,6 +1,6 @@
 {
 	"name": "sa-image-utils",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Image utilities (Node)",
 	"main": "lib/index.js",
 	"types": "types/index.d.ts",
