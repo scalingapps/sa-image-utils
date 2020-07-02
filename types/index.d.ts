@@ -7,7 +7,7 @@ export declare interface SaImageUtilsInterface {
 	getRawImageFromUrl(imageUrl: string): Promise<RawImageInfo>;
 	rawImageToBase64(imageInfo: RawImageInfo): string;
 }
-export declare class ImageUtils implements SaImageUtilsInterface {
+export declare class SaImageUtils implements SaImageUtilsInterface {
 	getRawImageFromUrl(imageUrl: string): Promise<RawImageInfo>;
 	rawImageToBase64(imageInfo: RawImageInfo): string;
 }
