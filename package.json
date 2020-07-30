@@ -1,12 +1,13 @@
 {
   "name": "sa-image-utils",
-  "version": "1.0.2",
+  "version": "1.0.7",
   "description": "Image utilities (Node)",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "tsc"
-  },
+    "build": "tsc",
+	"pretty": "prettier --write '**/*.{ts,js}'"
+},
   "dependencies": {
     "tslib": "^2.0.0"
   },

@@ -11,9 +11,8 @@ rawImageToBase64 (convert the buffer to base64 format, i.e. data:image/png;base6
 # # example using vanilla JS (node)
 ```javascript
 var {
-SaImageUtils 
+	saImageUtils 
 } = require("sa-image-utils");
-var saImageUtils = new SaImageUtils();
 const imageUrl = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/240px-JavaScript-logo.png';
 
 // get raw image info (this contains the buffer and contentType)
