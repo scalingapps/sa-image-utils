@@ -16,7 +16,7 @@ var {
 const imageUrl = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/240px-JavaScript-logo.png';
 
 // get raw image info (this contains the buffer and contentType)
-saImageUtils.getRawImageFromUrl(imageUrl)
+SaImageUtils.getRawImageFromUrl(imageUrl)
 .then((rawImageInfo) => {
   const { buffer, contentType } = rawImageInfo;
 
@@ -25,7 +25,7 @@ saImageUtils.getRawImageFromUrl(imageUrl)
   console.info('contentType', contentType);
 
   // get base64 from raw image info
-  const base64 = saImageUtils.rawImageToBase64(rawImageInfo);
+  const base64 = SaImageUtils.rawImageToBase64(rawImageInfo);
   console.info('base64.length', base64.length);
 });
 ```

@@ -6,20 +6,23 @@ export interface RawImageInfo {
   contentType: string
 }
 
-export interface SaImageUtilsInterface {
+export interface SaImageUtilsStatic {
   getRawImageFromUrl(imageUrl: string): Promise<RawImageInfo>
   rawImageToBase64(imageInfo: RawImageInfo): string
 }
 
-export class SaImageUtils implements SaImageUtilsInterface {
-  private getMessageFromException(e: any) {
+export interface SaImageUtilsInterface {}
+
+export const SaImageUtils: SaImageUtilsStatic = class
+  implements SaImageUtilsInterface {
+  private static getMessageFromException(e: any) {
     if (!e) {
       return 'unknown exception'
     }
     return (e.stack ? e.stack.split('\n') : e).toString()
   }
 
-  getRawImageFromUrl(imageUrl: string): Promise<RawImageInfo> {
+  public static getRawImageFromUrl(imageUrl: string): Promise<RawImageInfo> {
     return new Promise<RawImageInfo>((resolve, reject) => {
       if (
         (imageUrl || '').trim().length === 0 ||
@@ -71,7 +74,7 @@ export class SaImageUtils implements SaImageUtilsInterface {
     })
   }
 
-  rawImageToBase64(imageInfo: RawImageInfo): string {
+  public static rawImageToBase64(imageInfo: RawImageInfo): string {
     const { contentType, buffer } = imageInfo
     if (!contentType) {
       throw Error('rawImageToBase64: Invalid contentType')
@@ -82,5 +85,3 @@ export class SaImageUtils implements SaImageUtilsInterface {
     return `data:${contentType};base64,${buffer.toString('base64')}`
   }
 }
-
-export const saImageUtils: SaImageUtils = new SaImageUtils()
